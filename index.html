@@ -2,99 +2,22 @@
 <html style="margin: 0; background-color: darkgray;">
 
 <head>
-    <title>Rock Papers Scissors</title>
+    <title>Rock Paper Scissors</title>
 </head>
 
 <body>
-Type Game() on console to start.
-<br>
-Max points = 5.
-    <script>
-
-        let playerScore = 0;
-        let pcScore = 0;
-        const maxScore = 5;
-        let playerSelection;
-        let computerSelection;
-
-        function computerPlay() {
-
-            let randomNum = Math.floor(Math.random() * 3);
-            //math.floor retorna menor numero inteiro dentro do intervalo (função random * 3)
-            //math.random sorteia entre 0(inclusivo) e 1(exclusivo)
-            //multiplica por 3, por que quero entre  e 3
-
-            if (randomNum == 0) {
-                computerSelection = "rock"
-                //return ("rock");
-
-            }
-            else if (randomNum == 1) {
-                computerSelection = "paper"
-                //return ("paper");
-
-            }
-            else {
-                computerSelection = "scissors"
-                //return ("scissors");
-
-            }
-            //console.log(computerSelection);
-        }
-
-        function playerPlay() {
-
-            playerSelection = prompt("Type rock, paper or scissors");
-            playerSelection = playerSelection.toLowerCase(); //passa para lower case, caso tenha alguma maiuscula
-
-        }
-
-        function playRound(result) {
-
-            if (playerSelection == computerSelection) {
-
-                return ("It´s a tie!!");
-            }
-
-            else if (playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "paper" && computerSelection == "rock" || playerSelection == "scissors" && computerSelection == "paper") {
-
-                playerScore++;
-                return ("Player won the turn");
-            }
-
-            else if (playerSelection == "scissors" && computerSelection == "rock" || playerSelection == "rock" && computerSelection == "paper" || playerSelection == "paper" && computerSelection == "scissors") {
-
-                pcScore++;
-                return ("Computer won the turn");
-            }
-
-            else { return ("Error! Try again!!"); }
-
-        }
-
-        function Game() {
-            let result;
-            computerPlay();
-            playerPlay();
-            result = playRound(result);
-            console.log(result);
-            //console.log("pc Score: " + pcScore + "", "player Score: " + playerScore + "");
-
-            if (playerScore <= maxScore - 1 && pcScore <= maxScore - 1) {
-                Game();
-            }
-            else {
-                console.log("Final Score: Computer: " + pcScore + " Player: " + playerScore + "");
-
-                if (playerScore > pcScore) {
-                    console.log("Player won!!");
-                }
-                else { console.log("Computer won!!"); }
-
-                return;
-            }
-        }
-    </script>
+    Click on your choice.
+    <br>
+    Max points = 5.</br>
+    <button id="start">Start</button>
+    <br>
+        <button id="rock">Rock</button> <!--<button id="link com js">escrita no botão</button>-->
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>    
+        
+    </br>
+    <div id="container"></div>
+    <script type="text/javascript" src="rock-paper-scissors.js"></script>
 </body>
 
 </html>
