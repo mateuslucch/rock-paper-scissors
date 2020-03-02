@@ -7,3 +7,6 @@ Simple game. Use the console to play. </br>
 
 Ver. 2.0 - Rock-Paper-Scissors exercise from JavaScript Basics-DOM manipulation.</br>
 Added JS script on a separate file. No need of console to play. Need a prettier and more informative UI.</br>
+
+Ver. 2.1 - Rock-Paper-Scissors exercise from JavaScript Basics-DOM manipulation.</br>
+Added better and more informative UI.</br>
